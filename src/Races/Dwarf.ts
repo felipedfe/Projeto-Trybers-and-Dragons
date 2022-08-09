@@ -6,6 +6,7 @@ export default class Dwarf extends Race {
 
   constructor(nam: string, dex: number) {
     super(nam, dex);
+    
     this._name = nam;
     this._dexterity = dex;
     this._maxLifePoints = 80;
