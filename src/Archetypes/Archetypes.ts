@@ -1,13 +1,3 @@
-// export default abstract class Archetype {
-//   readonly name: string;
-//   readonly special = 0;
-//   readonly cost = 0;
-
-//   constructor(name: string) {
-//     this.name = name;
-//   }
-// }
-
 import { EnergyType } from '../Energy';
 
 export default abstract class Archetype {
