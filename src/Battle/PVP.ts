@@ -1,7 +1,6 @@
 import Character from '../Character';
 import { SimpleFighter } from '../Fighter';
 import Battle from './Battle';
-import getRandomInt from '../utils';
 
 export default class PVP extends Battle {
   private _char1: SimpleFighter;
@@ -14,24 +13,19 @@ export default class PVP extends Battle {
   }
 
   fight(): number {
-    let fightRound = true;
-    let diceRoll = 0;
+    // const fightRound = true;
+    let i = 0;
 
-    while (fightRound) {
-      diceRoll = getRandomInt(1, 10);
+    while (i < 10) {
       this.player.attack(this._char2);
-      this.player.lifePoints -= diceRoll;
       console.log(`life pts: ${this._char2.lifePoints}`);
   
-      diceRoll = getRandomInt(1, 10);
       this._char2.attack(this.player);
-      this._char2.lifePoints -= diceRoll;
       console.log(`life pts: ${this.player.lifePoints}`);
 
       console.log('--------------');
-      if (this.player.lifePoints <= 0 || this._char2.lifePoints <= 0) {
-        fightRound = false;
-      }
+      
+      i += 1;
     }
 
     return this.player.lifePoints === -1 ? -1 : 1;
