@@ -65,7 +65,8 @@ export default class Character implements Fighter {
     if (damage > 0) {
       this._lifePoints -= damage;
     }
-    if (this._lifePoints < 0) {
+
+    if (this._lifePoints <= 0) {
       this._lifePoints = -1;
     }
     return this._lifePoints;
@@ -101,18 +102,22 @@ export default class Character implements Fighter {
   }
 }
 
-// const peu = new Character('Peu');
-// const felipe = new Character('Felipe');
+const peu = new Character('Peu');
+const felipe = new Character('Felipe');
 
 // // console.log(peu.lifePoints);
 // // peu.receiveDamage(10);
 // // console.log(peu.lifePoints);
 
-// // console.log(felipe.lifePoints);
+console.log(felipe.lifePoints);
 
-// // peu.attack(felipe);
+peu.attack(felipe);
 
-// // console.log(felipe.lifePoints);
+console.log(felipe.lifePoints);
+
+peu.attack(felipe);
+
+console.log(felipe.lifePoints);
 
 // peu.special(felipe);
 // console.log(felipe.lifePoints);
