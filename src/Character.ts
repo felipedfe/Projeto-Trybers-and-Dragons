@@ -93,7 +93,7 @@ export default class Character implements Fighter {
     this._lifePoints = this._maxLifePoints;
   }
 
-  special(enemy: Fighter):void {
+  special(enemy: Fighter): void {
     const d20Bonus = getRandomInt(1, 20);
     const specialDamage = this._strength + d20Bonus;
 
