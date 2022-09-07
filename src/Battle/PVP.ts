@@ -13,7 +13,6 @@ export default class PVP extends Battle {
   }
 
   fight(): number {
-    // const fightRound = true;
     let i = 0;
 
     while (i < 10) {
@@ -41,7 +40,7 @@ export default class PVP extends Battle {
   }
 }
 
-/// ////////////
+// implementação
 
 const p1 = new Character('Virginia');
 const p2 = new Character('Felipe');

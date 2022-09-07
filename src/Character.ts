@@ -101,23 +101,3 @@ export default class Character implements Fighter {
     enemy.receiveDamage(specialDamage);
   }
 }
-
-const peu = new Character('Peu');
-const felipe = new Character('Felipe');
-
-// // console.log(peu.lifePoints);
-// // peu.receiveDamage(10);
-// // console.log(peu.lifePoints);
-
-console.log(felipe.lifePoints);
-
-peu.attack(felipe);
-
-console.log(felipe.lifePoints);
-
-peu.attack(felipe);
-
-console.log(felipe.lifePoints);
-
-// peu.special(felipe);
-// console.log(felipe.lifePoints);
